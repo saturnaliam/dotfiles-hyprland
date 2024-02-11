@@ -1,10 +1,12 @@
--- Read the docs: https://www.lunarvim.org/docs/configuration
--- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
--- Forum: https://www.reddit.com/r/lunarvim/
--- Discord: https://discord.com/invite/Xb9B4Ny
 lvim.plugins = {
+  -- colors
   { "Yazeed1s/oh-lucy.nvim" },
   { "frenzyexists/aquarium-vim" },
+  { "tiagovla/tokyodark.nvim" },
+  { "dasupradyumna/midnight.nvim" },
+  { "mellow-theme/mellow.nvim" },
+
+  -- general plugins
   { "folke/todo-comments.nvim",
     event = "BufRead",
     config = function()
@@ -18,15 +20,31 @@ lvim.plugins = {
       vim.g.mkdp_auto_start = 1
     end,
   },
+  { "simrat39/symbols-outline.nvim",
+    config = function()
+      require('symbols-outline').setup()
+    end
+  },
 }
 
-lvim.colorscheme = "oh-lucy"
+lvim.colorscheme = "mellow"
 
+-- setting tabs to be 2 spaces
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
+
+-- relative lines numbers + wrapping
 vim.opt.relativenumber = true
 vim.opt.wrap = true
 
 vim.api.nvim_create_user_command('W',function()
   vim.cmd("w")
 end,{})
+
+lvim.keys.normal_mode["<Tab>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-Tab>"] = ":BufferLineCyclePrev<CR>"
+
+lvim.keys.insert_mode["<C-h>"] = "<Left>"
+lvim.keys.insert_mode["<C-l>"] = "<Right>"
+lvim.keys.insert_mode["<C-j>"] = "<Down>"
+lvim.keys.insert_mode["<C-k>"] = "<Up>"
