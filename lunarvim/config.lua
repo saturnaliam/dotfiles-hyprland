@@ -5,6 +5,7 @@ lvim.plugins = {
   { "tiagovla/tokyodark.nvim" },
   { "dasupradyumna/midnight.nvim" },
   { "mellow-theme/mellow.nvim" },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   -- general plugins
   { "folke/todo-comments.nvim",
@@ -25,9 +26,14 @@ lvim.plugins = {
       require('symbols-outline').setup()
     end
   },
+  { "vimwiki/vimwiki" },
 }
 
-lvim.colorscheme = "mellow"
+lvim.colorscheme = "catppuccin-mocha"
+-- lvim.colorscheme = "mellow"
+-- lvim.colorscheme = "aquarium"
+-- lvim.colorscheme = "catppuccin-frappe"
+-- lvim.colorscheme = "oh-lucy"
 
 -- setting tabs to be 2 spaces
 vim.opt.shiftwidth = 2
@@ -48,3 +54,5 @@ lvim.keys.insert_mode["<C-h>"] = "<Left>"
 lvim.keys.insert_mode["<C-l>"] = "<Right>"
 lvim.keys.insert_mode["<C-j>"] = "<Down>"
 lvim.keys.insert_mode["<C-k>"] = "<Up>"
+
+lvim.keys.normal_mode["<C-m>"] = "<Plug>VimwikiIndex"
