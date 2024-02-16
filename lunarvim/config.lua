@@ -6,13 +6,15 @@ lvim.plugins = {
   { "dasupradyumna/midnight.nvim" },
   { "mellow-theme/mellow.nvim" },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "nyoom-engineering/nyoom.nvim" },
+  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+  { "sontungexpt/witch" },
+  { "xero/miasma.nvim" },
 
   -- general plugins
   { "folke/todo-comments.nvim",
-    event = "BufRead",
-    config = function()
-      require("todo-comments").setup()
-    end,
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {}
   },
   { "iamcco/markdown-preview.nvim",
     build = "cd app & npm install",
@@ -47,8 +49,20 @@ vim.api.nvim_create_user_command('W',function()
   vim.cmd("w")
 end,{})
 
+lvim.autocommands = {
+  {
+    "BufWinEnter", {
+      pattern = { "*.wiki" },
+      callback = function ()
+        vim.cmd("lua require('cmp').setup.buffer { enabled = false }")
+      end
+    },
+  }
+}
+
 lvim.keys.normal_mode["<Tab>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-Tab>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["U"] = "<C-r>"
 
 lvim.keys.insert_mode["<C-h>"] = "<Left>"
 lvim.keys.insert_mode["<C-l>"] = "<Right>"
