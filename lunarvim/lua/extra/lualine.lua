@@ -1,4 +1,5 @@
 lvim.builtin.lualine.style = "default"
+lvim.builtin.lualine.options.disabled_filetypes = { "vimwiki", "alpha" }
 
 -- left side of the bar
 lvim.builtin.lualine.sections.lualine_a = { "filename" }

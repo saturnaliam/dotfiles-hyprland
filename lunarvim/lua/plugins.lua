@@ -10,18 +10,14 @@ lvim.plugins = {
   { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   { "sontungexpt/witch" },
   { "xero/miasma.nvim" },
+  { "rockerBOO/boo-colorscheme-nvim" },
+  { "nyoom-engineering/oxocarbon.nvim" },
+  { "rebelot/kanagawa.nvim" },
 
   -- general plugins
   { "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {}
-  },
-  { "iamcco/markdown-preview.nvim",
-    build = "cd app & npm install",
-    ft = "markdown",
-    config = function()
-      vim.g.mkdp_auto_start = 1
-    end,
   },
   { "simrat39/symbols-outline.nvim",
     config = function()
@@ -29,4 +25,12 @@ lvim.plugins = {
     end
   },
   { "vimwiki/vimwiki" },
+  {
+    'jakewvincent/mkdnflow.nvim',
+    config = function()
+      require('mkdnflow').setup({
+          -- Config goes here; leave blank for defaults
+      })
+    end
+  },
 }

@@ -1,8 +1,13 @@
-lvim.colorscheme = "catppuccin-mocha"
+ lvim.colorscheme = "catppuccin-mocha"
 -- lvim.colorscheme = "mellow"
 -- lvim.colorscheme = "aquarium"
 -- lvim.colorscheme = "catppuccin-frappe"
 -- lvim.colorscheme = "oh-lucy"
+
+-- setting termguiwhatever
+if vim.fn.has("termguicolors") then
+  vim.opt.termguicolors = true
+end
 
 -- setting tabs to be 2 spaces
 vim.opt.shiftwidth = 2
@@ -15,7 +20,7 @@ vim.opt.wrap = true
 -- turns off lsp when entering a vimwiki file
 lvim.autocommands = {
   {
-    "BufWinEnter", {
+    { "BufWinEnter", "BufEnter"}, {
       pattern = { "*.wiki" },
       callback = function ()
         vim.cmd("lua require('cmp').setup.buffer { enabled = false }")
