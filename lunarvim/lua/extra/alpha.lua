@@ -13,10 +13,11 @@ local buttons = {
     spacing = 1,
   },
   entries = {
-    { "f", lvim.icons.ui.FindFile .. "  Find File", "<CMD>Telescope find_file<CR>" },
+    { "f", lvim.icons.ui.FindFile .. "  Find File", "<CMD>Telescope find_files<CR>" },
+    { "w", lvim.icons.ui.Note .. "  Open Notes", "<CMD>edit ~/notes/index.md<CR>" },
     { "n", lvim.icons.ui.Pencil .. "  New File", "<CMD>ene!<CR>" },
-    { "h", lvim.icons.ui.History .. "  Recent Files", ":Telescope oldfiles<CR>" },
-    { "c", lvim.icons.ui.Gear .. "  Configure LunarVim", "<CMD>edit " .. require("lvim.config"):get_user_config_path() .. "<CR>" },
+    { "c", "  Configure LunarVim", "<CMD>edit " .. require("lvim.config"):get_user_config_path() .. "<CR>" },
+    { "C", lvim.icons.ui.Gear .. "  Open Dotfiles", "<CMD>edit ~/dotfiles-hyprland/README.md<CR><CMD>NvimTreeOpen<CR>"},
     { "q", lvim.icons.ui.Close .. "  Quit", "<CMD>quit<CR>" },
   }
 }
