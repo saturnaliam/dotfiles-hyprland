@@ -21,12 +21,8 @@ vim.opt.wrap = true
 lvim.autocommands = {
   {
     { "BufWinEnter", "BufEnter"}, {
-<<<<<<< HEAD
       pattern = { "*.md" },
-=======
-      pattern = { "*.wiki" },
->>>>>>> ffce7df958e53ad6a0d2619657b114c43ea38854
-      callback = function ()
+     callback = function ()
         vim.cmd("lua require('cmp').setup.buffer { enabled = false }")
         vim.opt.wrap = false
       end
