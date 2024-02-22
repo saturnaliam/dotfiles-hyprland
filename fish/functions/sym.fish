@@ -1,3 +1,4 @@
+# moves src -> dest and symlinks dest -> src
 function sym
   set -f help 'usage: sym <src> <dest>
 Moves src to dest, and then symlinks dest to src.'
