@@ -1,5 +1,6 @@
 fish_add_path ~/.local/bin/ 
 fish_add_path ~/.npm-global/bin/
+set -g __fish_git_prompt_showdirtystate 1
 
 function fish_greeting
 end
@@ -7,7 +8,8 @@ end
 if status is-interactive
 end
 
-# aliases
+# general aliases
+alias rmdir="rm -rfi"
 alias rm="rm -i"
 alias ls="ls -A --color=tty"
 alias l="lvim"

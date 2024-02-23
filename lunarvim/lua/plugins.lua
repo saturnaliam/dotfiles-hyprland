@@ -1,18 +1,12 @@
 lvim.plugins = {
   -- colors
   { "Yazeed1s/oh-lucy.nvim" },
-  { "frenzyexists/aquarium-vim" },
   { "tiagovla/tokyodark.nvim" },
-  { "dasupradyumna/midnight.nvim" },
   { "mellow-theme/mellow.nvim" },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  { "nyoom-engineering/nyoom.nvim" },
-  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-  { "sontungexpt/witch" },
   { "xero/miasma.nvim" },
-  { "rockerBOO/boo-colorscheme-nvim" },
-  { "nyoom-engineering/oxocarbon.nvim" },
-  { "rebelot/kanagawa.nvim" },
+  { "tlhr/anderson.vim" },
+  { "sts10/vim-pink-moon" },
 
   -- general plugins
   { "folke/todo-comments.nvim",

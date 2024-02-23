@@ -1,8 +1,5 @@
- lvim.colorscheme = "catppuccin-mocha"
--- lvim.colorscheme = "mellow"
--- lvim.colorscheme = "aquarium"
--- lvim.colorscheme = "catppuccin-frappe"
--- lvim.colorscheme = "oh-lucy"
+lvim.colorscheme = "catppuccin-mocha"
+--lvim.colorscheme = "pink-moon"
 
 -- setting termguiwhatever
 if vim.fn.has("termguicolors") then
