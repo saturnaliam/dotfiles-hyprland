@@ -1,9 +1,8 @@
 # backs up a file
 function backup
   set -f help "usage: backup --[backup|rollback] <directory>
-Backs up a directory.
-When using, do not use a full path, and do not include '/' at the end of the directory."
-  
+Backs up a directory."
+
   if test (count $argv) -lt 2 
     echo $help
     return 0
@@ -12,8 +11,8 @@ When using, do not use a full path, and do not include '/' at the end of the dir
   argparse b/backup r/rollback h/help -- $argv
 
   if set -ql _flag_backup
-    set -f filename ~/backups/$argv[1]_(date +%d_%m_%+4Y_%H_%M_%S).tar
-    tar -cf $filename $argv[1]
+    set -f filename ~/backups/(path basename $argv[1])_(date +%d_%m_%+4Y_%H_%M_%S).tar
+    tar -cf $filename $argv[1] 2>&1 | grep -v  "Removing leading" 
     gzip $filename
   end
 
