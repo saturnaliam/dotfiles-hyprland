@@ -27,6 +27,7 @@ alias ga="git add"
 alias gm="git commit -m"
 alias gp="git push"
 alias gl="git pull"
+alias gcl="git clone"
 
 # arch aliases
 alias pacin="sudo pacman -S"
