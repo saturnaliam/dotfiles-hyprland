@@ -10,7 +10,10 @@ end
 # general aliases
 alias rmdir="rm -rfi"
 alias rm="rm -i"
-alias ls="ls -A --color=tty"
+alias ls="exa -a --color=always --group-directories-first"
+alias ll="exa -al --color=always --group-directories-first"
+alias lc="exa -a | grep -E '^\.'"
+alias mkdir="mkdir -p"
 alias l="lvim"
 alias t="tmux"
 
@@ -28,14 +31,29 @@ alias gm="git commit -m"
 alias gp="git push"
 alias gl="git pull"
 alias gcl="git clone"
+alias gch="git checkout"
+alias gb="git branch"
+
+# readable git aliases (almost never use these)
+alias addall="git add --all"
+alias add="git add"
+alias commit="git commit -m"
+alias push="git push"
+alias pull="git pull"
+alias clone="git clone"
+alias checkout="git checkout"
+alias branch="git branch"
 
 # arch aliases
+alias pinstall="sudo pacman -S"
+alias update="sudo pacman -Syu"
 alias pacin="sudo pacman -S"
 alias pacre="sudo pacman -R"
 alias pacup="sudo pacman -Syu"
 alias pacsearch="pacman -Ss"
 alias yain="yay -S"
 alias yare="yay -R"
+alias yinstall="yay -S"
 
 ## --- FUNCTIONS --- #
 # backs up a file
