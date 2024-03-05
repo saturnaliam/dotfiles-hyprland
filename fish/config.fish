@@ -3,7 +3,7 @@ set -g __fish_git_prompt_showdirtystate 1
 set fish_greeting
 
 function fish_prompt
-  printf ' %s%s/%s%s %s><> ' (set_color $fish_color_command) (prompt_pwd) (set_color $fish_color_cwd) (fish_git_prompt) (set_color $fish_color_keyword)
+  printf ' %s%s%s%s %s><> ' (set_color $fish_color_command) (prompt_pwd) (set_color $fish_color_cwd) (fish_git_prompt) (set_color $fish_color_keyword)
 end
 
 ## --- ALIASES --- ##
@@ -16,6 +16,7 @@ alias lc="exa -a | grep -E '^\.'"
 alias mkdir="mkdir -p"
 alias l="lvim"
 alias t="tmux"
+alias letrun="chmod +x"
 
 # z aliases
 alias home="z ~"
@@ -54,6 +55,11 @@ alias pacsearch="pacman -Ss"
 alias yain="yay -S"
 alias yare="yay -R"
 alias yinstall="yay -S"
+
+# deno aliases
+alias rdeno="deno run"
+alias denorw="deno run --allow-read --allow-write"
+alias denoa="deno run -A"
 
 ## --- FUNCTIONS --- #
 # backs up a file

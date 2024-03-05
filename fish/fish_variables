@@ -42,4 +42,4 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/lucia/\x2enpm\x2dglobal/bin\x1e/home/lucia/\x2elocal/bin
+SETUVAR fish_user_paths:/home/lucia/\x2econfig/emacs/bin\x1e/home/lucia/\x2enpm\x2dglobal/bin\x1e/home/lucia/\x2elocal/bin

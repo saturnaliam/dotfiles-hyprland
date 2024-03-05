@@ -13,6 +13,7 @@ vim.opt.tabstop = 2
 -- relative lines numbers + wrapping
 vim.opt.relativenumber = true
 vim.opt.wrap = true
+vim.opt.linebreak = true
 
 -- turns off lsp when entering a vimwiki file
 lvim.autocommands = {
@@ -21,8 +22,13 @@ lvim.autocommands = {
       pattern = { "*.md" },
      callback = function ()
         vim.cmd("lua require('cmp').setup.buffer { enabled = false }")
-        vim.opt.wrap = false
       end
     },
   },
 }
+
+vim.g.markdown_fenced_languages = {
+  "ts=typescript"
+}
+
+require'lspconfig'.denols.setup{}
