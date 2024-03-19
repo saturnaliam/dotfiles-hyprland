@@ -32,6 +32,10 @@
   "C-b" ":noh<CR>"
 )
 
+(map! :after org
+      :map org-mode-map
+      "C-g" #'org-deadline)
+
 (map! :map evil-normal-state-map
   "U" #'evil-redo
   "<backtab>" #'previous-buffer
@@ -45,6 +49,7 @@
 (map! :map evil-motion-state-map
   "C-b" nil
 )
+
 
 ;; ORG MODE
 (setq org-directory "~/org/")
